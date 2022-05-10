@@ -1,0 +1,12 @@
+com\projeto\projeto\model\dto\PremiacaoDTO.class
+com\projeto\projeto\business\PremiacaoBusiness.class
+com\projeto\projeto\model\entity\Premiacao.class
+com\projeto\projeto\exceptions\ResourceNotFoundException.class
+com\projeto\projeto\repository\PremiacaoRepository.class
+com\projeto\projeto\service\PremiacaoService.class
+com\projeto\projeto\resource\PremiacaoResource.class
+com\projeto\projeto\ProjetoApplication.class
+com\projeto\projeto\utils\CarregaArquivo.class
+com\projeto\projeto\model\dto\RetornoPremiacaoDTO.class
+com\projeto\projeto\exceptions\DatabaseException.class
+com\projeto\projeto\model\dto\RetornoDTO.class
