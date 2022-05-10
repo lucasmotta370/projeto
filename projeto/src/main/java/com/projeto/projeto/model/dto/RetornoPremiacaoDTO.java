@@ -58,4 +58,14 @@ public class RetornoPremiacaoDTO implements Serializable {
 
     public RetornoPremiacaoDTO() {
     }
+
+    @Override
+    public String toString() {
+        return "RetornoPremiacaoDTO{" +
+                "producer='" + producer + '\'' +
+                ", interval=" + interval +
+                ", previousWin=" + previousWin +
+                ", folowingWin=" + folowingWin +
+                '}';
+    }
 }
