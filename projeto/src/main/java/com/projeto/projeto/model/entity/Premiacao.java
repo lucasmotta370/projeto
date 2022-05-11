@@ -80,4 +80,12 @@ public class Premiacao {
 
     public Premiacao() {
     }
+
+    @Override
+    public String toString() {
+        return "Premiacao{" +
+                ", year=" + year +
+                ", producers='" + producers + '\'' +
+                '}';
+    }
 }

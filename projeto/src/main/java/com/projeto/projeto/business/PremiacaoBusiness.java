@@ -40,7 +40,6 @@ public class PremiacaoBusiness {
         //Ordena os intervalos por qtd de faixa premiada
         listaFaixas = ordenaIntervalos(listaFaixas);
 
-
         //Aqui percorre a lista verificando as maiores e menores faixas
         List<RetornoPremiacaoDTO> faixa = new ArrayList<>();
         Integer ultFaixa = 0;
@@ -75,9 +74,8 @@ public class PremiacaoBusiness {
             if(ultimoProducer.equals(p.getProducers())){
                 qtdAnos = Math.toIntExact(p.getYear()) - ultAno;
                 lista.add(new RetornoPremiacaoDTO(p.getProducers(),qtdAnos.longValue(), ultAno.longValue(), p.getYear()));
-            }else {
-                ultAno = Math.toIntExact(p.getYear());
             }
+            ultAno = Math.toIntExact(p.getYear());
             ultimoProducer = p.getProducers();
         };
         return lista;
