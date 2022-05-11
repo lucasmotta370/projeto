@@ -4,6 +4,8 @@ import com.projeto.projeto.model.dto.PremiacaoDTO;
 import com.projeto.projeto.model.entity.Premiacao;
 import com.projeto.projeto.service.PremiacaoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 import java.io.FileNotFoundException;
@@ -16,8 +18,10 @@ public class CarregaArquivo {
     @Autowired
     private PremiacaoService premiacaoService;
 
-    Scanner in;
+
+    @EventListener(ApplicationReadyEvent.class)
     public void carrega(){
+        Scanner in;
         try {
             in = new Scanner(new FileReader("src/main/resources/movielist.txt"));
             while (in.hasNextLine()) {

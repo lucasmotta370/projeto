@@ -44,13 +44,6 @@ public class PremiacaoResource {
         return ResponseEntity.ok().body(retornoDTO);
     }
 
-    @PostMapping(value = "/carrega-arquivo")
-    public ResponseEntity<PremiacaoDTO> carregaArquivo() {
-        carregaArquivo.carrega();
-        return ResponseEntity.ok().build();
-    }
-
-
     @GetMapping
     public ResponseEntity<Page<PremiacaoDTO>> findAll(
 

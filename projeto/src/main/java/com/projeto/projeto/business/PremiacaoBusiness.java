@@ -3,6 +3,7 @@ package com.projeto.projeto.business;
 import com.projeto.projeto.model.dto.RetornoDTO;
 import com.projeto.projeto.model.dto.RetornoPremiacaoDTO;
 import com.projeto.projeto.model.entity.Premiacao;
+import com.projeto.projeto.repository.PremiacaoRepository;
 import com.projeto.projeto.service.PremiacaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,9 +17,9 @@ import java.util.stream.Collectors;
 public class PremiacaoBusiness {
 
     @Autowired
-    private PremiacaoService premiacaoService;
+    private PremiacaoRepository premiacaoRepository;
     public RetornoDTO calculaFaixas() {
-        List<Premiacao> premiacao = premiacaoService.findAll();
+        List<Premiacao> premiacao = premiacaoRepository.findAll();
 
         List<RetornoPremiacaoDTO> min = getFaixa(premiacao, false);
 
